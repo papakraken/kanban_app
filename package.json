@@ -2,7 +2,7 @@
   "name": "kanban_app",
   "version": "1.0.0",
   "description": "Survive JS Self-study",
-  "main": "index.js",
+  "main": "index.jsx",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack-dev-server"
@@ -23,6 +23,8 @@
   },
   "homepage": "https://github.com/papakraken/kanban_app#readme",
   "devDependencies": {
+    "babel-core": "^5.8.25",
+    "babel-loader": "^5.3.2",
     "css-loader": "^0.19.0",
     "html-webpack-plugin": "^1.6.2",
     "style-loader": "^0.12.4",
@@ -30,5 +32,8 @@
     "webpack-dev-server": "^1.12.0",
     "webpack-html-plugin": "^0.1.0",
     "webpack-merge": "^0.2.0"
+  },
+  "dependencies": {
+    "react": "^0.14.0"
   }
 }
