@@ -69,13 +69,15 @@ export default class App extends React.Component {
 		const notes = this.state.notes;
 		const noteIndex = this.findNote(id);
 		
-		if(nodeIndex < 0) {
+		if(noteIndex < 0) {
 			return;
 		}
 		
 		this.setState({
 			notes: notes.slice(0,noteIndex).concat(notes.slice(noteIndex +1))
 		});
+		
+		
 	
 	}
 	

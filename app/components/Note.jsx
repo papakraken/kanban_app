@@ -10,7 +10,7 @@ export default class Note extends React.Component {
 		this.edit = this.edit.bind(this);
 		this.renderEdit = this.renderEdit.bind(this);
 		this.renderTask = this.renderTask.bind(this);
-		this.renderNote = this.renderNote.bind(this);
+		// this.renderNote = this.renderNote.bind(this);
 		
 		this.state = {
 			editing: false
@@ -38,7 +38,7 @@ export default class Note extends React.Component {
 		const onDelete = this.props.onDelete;
 		
 		return (
-			<div onClick={this.edit}>
+			<div  onClick={this.edit}>
 		 		<span className="task">{this.props.task}</span>
 				{onDelete? this.renderDelete() : null}
 		 	</div>
@@ -74,7 +74,8 @@ export default class Note extends React.Component {
 			<li className="note" key={`notes${note.id}`}>
 				<Note
 					task={note.task}
-					onEdit={this.props.onEdit.bind(null, note.id)} />
+					onEdit={this.props.onEdit.bind(null, note.id)}
+					onDelete={this.props.onDelete.bind(null,note,id)} />
 			</li>
 		)
 	}
